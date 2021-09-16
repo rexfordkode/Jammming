@@ -6,17 +6,17 @@ import './TrackList.css';
 
 class TrackList extends React.Component {
     
-    render(){
+    render() {
+
         return(
-            <div class="TrackList">
-                {
-                   this.props.tracks.map(track => {
-                       return <Track track={track}
-                        key={track.id} />
-                   })
-                }
+            <div className="TrackList">
+                {this.props.tracks.map(track => {
+                    return <Track track={track}
+                    key={track.id}/>
+                })}
           </div>
         )
     }
 }
 export default TrackList;
+
