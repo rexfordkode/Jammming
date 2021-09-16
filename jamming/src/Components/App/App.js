@@ -26,9 +26,8 @@ class App extends React.Component {
       let tracks = this.state.playlistTracks;
       if(tracks.find(savedTrack => savedTrack.id === track.id)){
         return;
-      }else{
-        track.push(track);
       }
+        tracks.push(track);
       this.setState({playlistTracks: tracks})
     }
 
@@ -41,7 +40,7 @@ class App extends React.Component {
      <SearchBar /> 
     <div class="App-playlist">
     
-      <SearchResults SearchResults={this.state.SearchResults} onAdd={this.props.onAdd} 
+      <SearchResults SearchResults={this.state.SearchResults} onAdd={this.addTrack} 
       isRemoval={false} /> 
     
        <Playlist  playlistName={this.state.playlistName}
